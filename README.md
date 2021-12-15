@@ -15,7 +15,7 @@ Les données ont été récupérées sur le site data-gouv.fr : https://www.data
 
 La base de données DVF recense les mutations à titre onéreux (vente, vente en l'état futur d'achèvement, vente terrain à bâtir, échange, adjudication, expropriation) advenues sur les années de 2017 à 2020.
 
-Les données obtenues sont constitues de 4 fichiers texte (un pour chaque année).
+Les données obtenues sont constituées de 4 fichiers texte (un pour chaque année).
 
 <img src="/img/Source_files/file_text.png" width="800" height="500">
 
@@ -45,11 +45,11 @@ Pour me connecter, j'ai utilisé les informations fournies lors de la création 
 
 <img src="/img/SQL_Server/connexion.png" width="600" height="400">
 
-J'ai ensuitecrée une nouvelle database : *DVF*. 
+J'ai ensuite crée une nouvelle database : *DVF*. 
 
 <img src="/img/SQL_Server/new_database.png" width="600" height="600">
 
-Et importer chacun de mes flat files (.csv) dans une table correspondante (ex : *dvf_2017*).
+Et importé chacun de mes flat files (.csv) dans une table correspondante (ex : *dvf_2017*).
 
 <img src="/img/SQL_Server/csv_to_table.png" width="800" height="500">
 
