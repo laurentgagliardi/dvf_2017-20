@@ -17,6 +17,8 @@ La base de données DVF recense les mutations à titre onéreux (vente, vente en
 
 Les données obtenues sont constitues de 4 fichiers texte (un pour chaque année).
 
+<img src="/img/Source_files/file_text.png" width="800" height="500">
+
 # Nettoyage de données <a name="nettoyage"></a>
 
 Les fichiers texte de chaque année contenant plus de 3 millions de lignes, il a été nécessaire de spliter ceux-ci avec *Notepad++* pour permettre de ne pas avoir d'erreur  de type *"out of memory"* durant l'exécution des traitements de cleaning.
@@ -41,16 +43,15 @@ Disponible ici : https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-m
 
 Pour me connecter, j'ai utilisé les informations fournies lors de la création via Docker (voir ci-dessous).
 
-![Alt text](/img/SQL_Server/connexion.png?raw=true "Connexion SQL Server")
+<img src="/img/SQL_Server/connexion.png" width="600" height="400">
 
 J'ai ensuitecrée une nouvelle database : *DVF*. 
 
-![Alt text](/img/SQL_Server/new_database.png?raw=true "New Database")
+<img src="/img/SQL_Server/new_database.png" width="600" height="600">
 
 Et importer chacun de mes flat files (.csv) dans une table correspondante (ex : *dvf_2017*).
 
-![Alt text](/img/SQL_Server/import_flat_files.png?raw=true "Import .csv")
-![Alt text](/img/SQL_Server/csv_to_table.png?raw=true "New Table")
+<img src="/img/SQL_Server/csv_to_table.png" width="800" height="500">
 
 # Analysis
 
