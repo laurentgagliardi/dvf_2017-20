@@ -39,7 +39,18 @@ Une fois l'image de SQL Server en place, j'ai du télécharger un logiciel pour 
 
 Disponible ici : https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15.
 
-J'ai ensuitecrée une nouvelle database : *DVF*. Et insérer chacun de mes flat files (.csv) dans une table correspondante (ex : *dvf_2017*).
+Pour me connecter, j'ai utilisé les informations fournies lors de la création via Docker (voir ci-dessous).
+
+![Alt text](/img/SQL_Server/connexion.png?raw=true "Connexion SQL Server")
+
+J'ai ensuitecrée une nouvelle database : *DVF*. 
+
+![Alt text](/img/SQL_Server/new_database.png?raw=true "New Database")
+
+Et importer chacun de mes flat files (.csv) dans une table correspondante (ex : *dvf_2017*).
+
+![Alt text](/img/SQL_Server/import_flat_files.png?raw=true "Import .csv")
+![Alt text](/img/SQL_Server/csv_to_table.png?raw=true "New Table")
 
 # Analysis
 
