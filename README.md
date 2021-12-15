@@ -13,15 +13,15 @@
 
 Les données ont été récupérées sur le site data-gouv.fr : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/.
 
-Ces données comprennent 4 fichiers texte pour les années 2017, 2018, 2019 et 2020.
+La base de données DVF recense les mutations à titre onéreux (vente, vente en l'état futur d'achèvement, vente terrain à bâtir, échange, adjudication, expropriation) advenues sur les années de 2017 à 2020.
+
+Les données obtenues sont constitues de 4 fichiers texte (un pour chaque année).
 
 # Nettoyage de données <a name="nettoyage"></a>
 
-Les fichiers texte de chaque année contenant plus de 3 millions de lignes, il a été nécessaire de spliter ceux-ci pour permettre de ne pas avoir d'erreur  de type *"out of memory"* durant l'exécution des traitements de cleaning.
+Les fichiers texte de chaque année contenant plus de 3 millions de lignes, il a été nécessaire de spliter ceux-ci avec *Notepad++* pour permettre de ne pas avoir d'erreur  de type *"out of memory"* durant l'exécution des traitements de cleaning.
 
-Les scripts Python ont servi à effectuer un reformatage des données et à obtenir en sortie des .csv (un pour chaque année). 
-
-Ces scripts sont disponibles dans */scripts/python/*.
+Les scripts Python ont servi à effectuer un reformatage des données et à obtenir en sortie des .csv (un pour chaque année). Ces scripts sont disponibles dans */scripts/python/*.
 
 # Stockage sous SQL Server <a name="SQL_Server"></a>
 
@@ -35,11 +35,12 @@ Documentation : https://hub.docker.com/_/microsoft-mssql-server.
 
 ## SQL Server Management Studio <a name="SSMS"></a>
 
-Une fois l'image de SQL Server en place, j'ai du téléchargé un logiciel pour pouvoir le gérer : Microsoft SQL Server Management Studio 18 - https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15.
+Une fois l'image de SQL Server en place, j'ai du télécharger un logiciel pour pouvoir manager le stockage des mes données : Microsoft SQL Server Management Studio 18.
 
-J'ai crée une nouvelle database : *DVF*. Puis insérer chacun de mes flat files (.csv) dans une table correspondante (ex : *dvf_2017*).
+Disponible ici : https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15.
+
+J'ai ensuitecrée une nouvelle database : *DVF*. Et insérer chacun de mes flat files (.csv) dans une table correspondante (ex : *dvf_2017*).
 
 # Analysis
 
 # Visualization 
-
