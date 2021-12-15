@@ -6,8 +6,10 @@
 3. [Stockage sous SQL Server](#SQL_Server)
     1.  [Docker](#Docker)
     2.  [SQL Server Management Studio](#SSMS)
-4. [Visualisation](#Visualisation)
-5. [Analysis](#Analysis)
+4. [Visualisation avec Power BI](#Visualisation)
+    1.  [Connexion SQL Server](#Power_BI_SQL_Server)
+6. [Analysis](#Analysis)
+
 
 # Sources de données <a name="sources"></a>
 
@@ -53,9 +55,13 @@ Et importé chacun de mes flat files (.csv) dans une table correspondante (ex : 
 
 <img src="/img/SQL_Server/csv_to_table.png" width="800" height="500">
 
-# Visualisation <a name="Visualisation"></a>
+# Visualisation avec Power BI <a name="Visualisation"></a>
 
-Pour visualiser mes données, j'ai opté pour le tout Microsoft, avec Power BI. J'ai donc connecté Power Bi à SQL Server pour obtenir les données stockées dans mes tables.
+Pour visualiser mes données, j'ai opté pour le tout Microsoft, avec Power BI.
+
+## Connexion SQL Server <a name="Power_BI_SQL_Server"></a>
+
+J'ai donc connecté Power Bi à SQL Server pour obtenir les données stockées dans mes tables.
 
 <img src="/img/Power_BI/obtenir_data_SQL_Server.png" width="600" height="500">
 
