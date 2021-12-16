@@ -10,20 +10,16 @@ dtype_dico = {"No disposition" : str,
               "Nombre pieces principales" : str,
               }
 
-# Import des fichiers eclates des valeurs foncieres de 2018 #
+# Liste des noms de fichiers texte splites.
+listetxt = ['2018_1','2018_2','2018_3','2018_4','2018_5','2018_6','2018_7']
+file_name = '{}.txt'
+df_list = []
+
+# Import des fichiers eclates des valeurs foncieres de 2017 #
     # low_memory = False pour depasser la limite d'usage memoire
     # encoding = 'ISO-8859-1'
-dvf_2018_1 = pd.read_csv("2018_1.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2018_2 = pd.read_csv("2018_2.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2018_3 = pd.read_csv("2018_3.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2018_4 = pd.read_csv("2018_4.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2018_5 = pd.read_csv("2018_5.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2018_6 = pd.read_csv("2018_6.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2018_7 = pd.read_csv("2018_7.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
+dvf_2018 = pd.concat([pd.read_csv(file_name.format(i), sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1") for i in listetxt])
 
-# Dictionnaire des df pour concatenation
-frames = [dvf_2018_1,dvf_2018_2,dvf_2018_3,dvf_2018_4,dvf_2018_5,dvf_2018_6,dvf_2018_7]
-dvf_2018 = pd.concat(frames)
 # Nettoyage de la memoire
 gc.collect()
 
@@ -35,6 +31,7 @@ dvf_2018 = dvf_2018.drop(columns=['Code service CH', 'Reference document', '1 Ar
                                   '5eme lot', 'Surface Carrez du 5eme lot', 'Nombre de lots', 'Identifiant local',
                                   'B/T/Q', "Nature culture speciale", "Code type local", "No plan", "No Volume"
                                   ])
+                                  
 # Ajout d'un 0 en debut de code postal / code departement pour les cas concernes
     # Code postal avec moins de 5 chiffres (4 chiffres ou il manque le 0 de debut)
 dvf_2018["Code postal"] = dvf_2018["Code postal"].apply(lambda x: '0' + str(x) if len(str(x)) < 5 else str(x))

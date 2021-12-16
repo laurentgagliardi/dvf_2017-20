@@ -10,20 +10,16 @@ dtype_dico = {"No disposition" : str,
               "Nombre pieces principales" : str,
               }
 
-# Import des fichiers eclates des valeurs foncieres de 2020 #
+# Liste des noms de fichiers texte splites.
+listetxt = ['2020_1','2020_2','2020_3','2020_4','2020_5','2020_7','2020_7']
+file_name = '{}.txt'
+df_list = []
+
+# Import des fichiers eclates des valeurs foncieres de 2017 #
     # low_memory = False pour depasser la limite d'usage memoire
     # encoding = 'ISO-8859-1'
-dvf_2020_1 = pd.read_csv("2020_1.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2020_2 = pd.read_csv("2020_2.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2020_3 = pd.read_csv("2020_3.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2020_4 = pd.read_csv("2020_4.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2020_5 = pd.read_csv("2020_5.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2020_6 = pd.read_csv("2020_6.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
-dvf_2020_7 = pd.read_csv("2020_7.txt", sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1")
+dvf_2020 = pd.concat([pd.read_csv(file_name.format(i), sep = "|", dtype = dtype_dico, low_memory = False, encoding = "ISO-8859-1") for i in listetxt])
 
-# Dictionnaire des df pour concatenation
-frames = [dvf_2020_1,dvf_2020_2,dvf_2020_3,dvf_2020_4,dvf_2020_5,dvf_2020_6,dvf_2020_7]
-dvf_2020 = pd.concat(frames)
 # Nettoyage de la memoire
 gc.collect()
 
