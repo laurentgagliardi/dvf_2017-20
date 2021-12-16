@@ -8,8 +8,11 @@
     2.  [SQL Server Management Studio](#SSMS)
 4. [Visualisation avec Power BI](#Visualisation)
     1.  [Connexion SQL Server](#Power_BI_SQL_Server)
+    2.  [Preparation des données](#Data_preparation)
+    3.  [Création du dashboard](#Dashboard_creation)
+    4.  [Ex : Dashboard 2017](#Dashboard_2017)
+    5.  [Consultation du .pbix](#pbix)
 6. [Analysis](#Analysis)
-
 
 # Sources de données <a name="sources"></a>
 
@@ -73,6 +76,38 @@ Et j'ai donc rapidement obtenu mes tables dans Power BI (relativement aux taille
 
 <img src="/img/Power_BI/table_power_bi.png" width="750" height="500">
 
+## Préparation des données <a name="Data_preparation"></a>
+
+1) Transformation des données "Valeur fonciere", "Surface batie" et " Surface terrain" en float.
+    -  Changement des "." en "," et changement du type de données : devise pour la valeur foncière et décimal pour les surfaces.
+2) Définition des données géographiques (hiérarchie Géo) : 
+    - Pays : ajout d'une colonne "Pays" contenant la valeur "France".
+    - Département : code département.
+    - Code postal : code postal.
+    - Localité : commune.
+3) Gestion des données vides pour les types de locaux : remplacement des "*null*" par "Autres".
+
+## Création du dashboard  <a name="Dashboard_creation"></a>
+
+Le .pbix sera constitué de 4 dashboard - un pour chaque année - construit selon le même schéma détaille ci-après : 
+- Titre : Valeur foncière de l'année 20XX.
+- Nature de la mutation : filtre sur le type de mutation.
+- Valeur foncière (médiane) par département : 3DMa.
+- Valeur foncière (médiane) par type de local : pie chart sur le pourcentage de valeur foncière associée à chaque type de local. 
+- Valeur foncière (médiane) et nombre de ventes par mois : histogramme des valeurs foncières par mois groupé à une courbe du nombre de ventes par mois au cours de l'année 20XX.
+
+## Ex : Dashboard 2017 <a name="Dashboard_2017"></a>
+
+Le dashboard de 2017 a l'aspect suivant : 
+
+<img src="/img/Power_BI/dashboard_2017.png" width="900" height="550">
+
+Les aperçus des autres dashboards (2018 à 2020) sont également disponibles dans */img/Power_BI/*.
+
+## Consultation du .pbix <a name="pbix"></a>
+
+Le .pbix dépassant les 100Mb, il n'a pas pu être déposé ici.
+
+Celui-ci est en revanche disponible : https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0.
+
 # Analysis
-
-
