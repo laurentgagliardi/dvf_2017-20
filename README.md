@@ -1,6 +1,6 @@
 # Valeurs foncieres en France (2017-2020)
 
-<img src="/img/global/projet_fil_rouge.png" width="800" height="750">
+<img src="/img/global/global_fil_rouge.png" width="800" height="750">
 
 # Table of Contents
 1. [Sources de données](#sources)
