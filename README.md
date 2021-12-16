@@ -16,7 +16,7 @@
 
 # Sources de données <a name="sources"></a>
 
-Les données ont été récupérées sur le site data-gouv.fr : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/.
+Les données ont été récupérées sur le site data-gouv.fr : [dvf](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/).
 
 La base de données DVF recense les mutations à titre onéreux (vente, vente en l'état futur d'achèvement, vente terrain à bâtir, échange, adjudication, expropriation) advenues sur les années de 2017 à 2020.
 
@@ -38,13 +38,13 @@ Docker a été utilisé pour monter une image SQL Server. Il a suffit d'ouvrir P
 - ```docker pull mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04```
 - ```docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<my_password>" -e "MSSQL_PID=Express" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04```
 
-Documentation : https://hub.docker.com/_/microsoft-mssql-server.
+Documentation : [MySQL Server via Docker](https://hub.docker.com/_/microsoft-mssql-server).
 
 ## SQL Server Management Studio <a name="SSMS"></a>
 
 Une fois l'image de SQL Server en place, j'ai du télécharger un logiciel pour pouvoir manager le stockage des mes données : Microsoft SQL Server Management Studio 18.
 
-Disponible ici : https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15.
+Disponible ici : [SQL Server Management Studio](https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
 
 Pour me connecter, j'ai utilisé les informations fournies lors de la création via Docker (voir ci-dessous).
 
@@ -108,6 +108,6 @@ Les aperçus des autres dashboards (2018 à 2020) sont également disponibles da
 
 Le .pbix dépassant les 100Mb, il n'a pas pu être déposé ici.
 
-Celui-ci est en revanche disponible : https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0.
+Celui-ci est en revanche disponible suivant ce lien : [dashboard_annuel](https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0).
 
 # Analysis
