@@ -79,12 +79,12 @@ L'aspect est le suivant :
 
 Les aperçus des autres dashboards (2018 à 2020) sont également disponibles dans */img/Power_BI/*.
 
-Le .pbix dépassant les 100Mb, il n'a pas pu être déposé ici. Celui-ci est en revanche disponible ici : [dashboard_annuel](https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0).
+Le .pbix dépassant les 100Mb, il n'a pas pu être déposé sur Git. Celui-ci est en revanche disponible ici : [dashboard_annuel](https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0).
 
 # Analyse de données <a name="Analysis"></a>
 
 Jupyter notebook a été utilisé pour l'analyse; celui-ci est consultable dans */scripts/jupyter_notebook/*.
-L'analyse est constitué de 3 grands axes : 
+L'analyse est constituée de 3 grands axes : 
 1) Analyse générale sur les valeurs foncières en France.
 2) Focus sur la métropole lyonnaise.
 3) Analyse temporelle (non terminée).
