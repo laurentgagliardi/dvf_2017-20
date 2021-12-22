@@ -12,25 +12,17 @@
     1.  [Connexion SQL Server](#Power_BI_SQL_Server)
     2.  [Preparation des données](#Data_preparation)
     3.  [Création du dashboard](#Dashboard_creation)
-    4.  [Ex : Dashboard 2017](#Dashboard_2017)
-    5.  [Consultation du .pbix](#pbix)
-6. [Analysis](#Analysis)
+6. [Analyse de données](#Analysis)
 
 # Sources de données <a name="sources"></a>
 
 Les données ont été récupérées sur le site data-gouv.fr : [dvf](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/).
 
-La base de données DVF recense les mutations à titre onéreux (vente, vente en l'état futur d'achèvement, vente terrain à bâtir, échange, adjudication, expropriation) advenues sur les années de 2017 à 2020.
-
-Les données obtenues sont constituées de 4 fichiers texte (un pour chaque année).
-
-<img src="/img/Source_files/file_text.png" width="800" height="500">
+La base de données DVF recense les mutations à titre onéreux (vente, vente en l'état futur d'achèvement, vente terrain à bâtir, échange, adjudication, expropriation) advenues sur les années de 2017 à 2020. Les données obtenues étaient constituées de 4 fichiers texte (un pour chaque année).
 
 # Nettoyage de données <a name="nettoyage"></a>
 
-Les fichiers texte de chaque année contenant plus de 3 millions de lignes, il a été nécessaire de spliter ceux-ci avec *Notepad++* pour permettre de ne pas avoir d'erreur  de type *"out of memory"* durant l'exécution des traitements de cleaning.
-
-Les scripts Python ont servi à effectuer un reformatage des données et à obtenir en sortie des .csv (un pour chaque année). Ces scripts sont disponibles dans */scripts/python/*.
+Les fichiers texte de chaque année contenant plus de 3 millions de lignes, il a été nécessaire de spliter ceux-ci avec *Notepad++* pour permettre de ne pas avoir d'erreur  de type *"out of memory"* durant l'exécution des traitements de cleaning. Les scripts Python ont servi à effectuer un reformatage des données et à obtenir en sortie des .csv (un pour chaque année). Ces scripts sont disponibles dans */scripts/python/*.
 
 # Stockage sous SQL Server <a name="SQL_Server"></a>
 
@@ -44,39 +36,21 @@ Documentation : [MySQL Server via Docker](https://hub.docker.com/_/microsoft-mss
 
 ## SQL Server Management Studio <a name="SSMS"></a>
 
-Une fois l'image de SQL Server en place, j'ai du télécharger un logiciel pour pouvoir manager le stockage des mes données : Microsoft SQL Server Management Studio 18.
+Le logiciel a SQL Server Management Studio a été utilisé pour pouvoir manager le stockage des mes données. Disponible ici : [SQL Server Management Studio](https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
 
-Disponible ici : [SQL Server Management Studio](https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
-
-Pour me connecter, j'ai utilisé les informations fournies lors de la création via Docker (voir ci-dessous).
+Pour se connecter : 
 
 <img src="/img/SQL_Server/connexion.png" width="600" height="400">
 
-J'ai ensuite crée une nouvelle database : *DVF*. 
-
-<img src="/img/SQL_Server/new_database.png" width="600" height="600">
-
-Et importé chacun de mes flat files (.csv) dans une table correspondante (ex : *dvf_2017*).
-
-<img src="/img/SQL_Server/csv_to_table.png" width="800" height="500">
+Il suffit ensuite de créer une base *DVF*, d'importer les .csv dans des tables correspondantes *dvf_2017*.
 
 # Visualisation avec Power BI <a name="Visualisation"></a>
 
-Pour visualiser mes données, j'ai opté pour le tout Microsoft, avec Power BI.
-
 ## Connexion SQL Server <a name="Power_BI_SQL_Server"></a>
 
-J'ai donc connecté Power Bi à SQL Server pour obtenir les données stockées dans mes tables.
+Pour se connecter :
 
 <img src="/img/Power_BI/obtenir_data_SQL_Server.png" width="600" height="500">
-
-Il m'a encore une fois suffit de renseigner les informations utilisées lors de la création via Docker. J'ai même pu préciser directement la BDD *DVF*. 
-
-<img src="/img/Power_BI/power_bi_BDD.png" width="500" height="250">
-
-Et j'ai donc rapidement obtenu mes tables dans Power BI (relativement aux tailles de mes tables SQL - plus de 3M d'enregistrements chacune).
-
-<img src="/img/Power_BI/table_power_bi.png" width="750" height="500">
 
 ## Préparation des données <a name="Data_preparation"></a>
 
@@ -98,18 +72,19 @@ Le .pbix sera constitué de 4 dashboard - un pour chaque année - construit selo
 - Valeur foncière (médiane) par type de local : pie chart sur le pourcentage de valeur foncière associée à chaque type de local. 
 - Valeur foncière (médiane) et nombre de ventes par mois : histogramme des valeurs foncières par mois groupé à une courbe du nombre de ventes par mois au cours de l'année 20XX.
 
-## Ex : Dashboard 2017 <a name="Dashboard_2017"></a>
-
-Le dashboard de 2017 a l'aspect suivant : 
+L'aspect est le suivant : 
 
 <img src="/img/Power_BI/dashboard_2017.png" width="900" height="550">
 
 Les aperçus des autres dashboards (2018 à 2020) sont également disponibles dans */img/Power_BI/*.
 
-## Consultation du .pbix <a name="pbix"></a>
+Le .pbix dépassant les 100Mb, il n'a pas pu être déposé ici. Celui-ci est en revanche disponible suivant ce lien : [dashboard_annuel](https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0).
 
-Le .pbix dépassant les 100Mb, il n'a pas pu être déposé ici.
+# Analyse de données <a name="Analysis"></a>
 
-Celui-ci est en revanche disponible suivant ce lien : [dashboard_annuel](https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0).
-
-# Analysis
+Jupyter notebook a été utilisé pour l'analyse; celui-ci est consultable dans */scripts/jupyter_notebook/*.
+L'analyse est constitué de 3 grands axes : 
+1) Analyse générale sur les valeurs foncières en France.
+2) Focus sur la métropole lyonnaise.
+3) Analyse temporelle (non terminée).
+4) Machine Learning (non traité - faute de temps).
