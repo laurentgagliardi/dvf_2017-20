@@ -37,7 +37,7 @@ Documentation : [MySQL Server via Docker](https://hub.docker.com/_/microsoft-mss
 
 ## SQL Server Management Studio <a name="SSMS"></a>
 
-Le logiciel a SQL Server Management Studio a été utilisé pour pouvoir manager le stockage des mes données. Disponible ici : [SQL Server Management Studio](https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
+Le logiciel SQL Server Management Studio a été utilisé pour pouvoir gérer le stockage des données. Téléchargeable ici : [SQL Server Management Studio](https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
 
 Pour se connecter : 
 
