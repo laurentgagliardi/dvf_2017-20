@@ -1,5 +1,6 @@
 # Valeurs foncieres en France (2017-2020)
 
+Le rapport de ce projet Fil Rouge est disponible dans */etc/*.
 <img src="/img/global/global_fil_rouge.png" width="800" height="750">
 
 # Table of Contents
