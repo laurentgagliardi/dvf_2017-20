@@ -66,7 +66,7 @@ Pour se connecter :
 
 ## Création du dashboard  <a name="Dashboard_creation"></a>
 
-Le .pbix sera constitué de 4 dashboard - un pour chaque année - construit selon le même schéma détaille ci-après : 
+Le .pbix sera constitué de 4 dashboard - un pour chaque année - construit selon le même schéma détaillé ci-après : 
 - Titre : Valeur foncière de l'année 20XX.
 - Nature de la mutation : filtre sur le type de mutation.
 - Valeur foncière (médiane) par département : 3DMa.
@@ -79,7 +79,7 @@ L'aspect est le suivant :
 
 Les aperçus des autres dashboards (2018 à 2020) sont également disponibles dans */img/Power_BI/*.
 
-Le .pbix dépassant les 100Mb, il n'a pas pu être déposé ici. Celui-ci est en revanche disponible suivant ce lien : [dashboard_annuel](https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0).
+Le .pbix dépassant les 100Mb, il n'a pas pu être déposé ici. Celui-ci est en revanche disponible ici : [dashboard_annuel](https://app.powerbi.com/links/2K-8GldX8w?ctid=373016f8-79a9-4eed-80d2-100ce948d960&pbi_source=linkShare&bookmarkGuid=1222e86f-1cca-4dc2-afab-7e082bb8ccd0).
 
 # Analyse de données <a name="Analysis"></a>
 
