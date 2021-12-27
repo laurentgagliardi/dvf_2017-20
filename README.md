@@ -87,5 +87,5 @@ Jupyter notebook a été utilisé pour l'analyse; celui-ci est consultable dans 
 L'analyse est constituée de 3 grands axes : 
 1) Analyse générale sur les valeurs foncières en France.
 2) Focus sur la métropole lyonnaise.
-3) Analyse temporelle (non terminée).
-4) Machine Learning (non traité - faute de temps).
+3) Analyse temporelle - *Time Series ANalysis* (TSA).
+4) Machine Learning (non traité - faute de pertinence).
