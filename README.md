@@ -84,8 +84,8 @@ Le .pbix dépassant les 100Mb, il n'a pas pu être déposé sur Git. Celui-ci es
 # Analyse de données <a name="Analysis"></a>
 
 Jupyter notebook a été utilisé pour l'analyse; celui-ci est consultable dans */scripts/jupyter_notebook/*.
+
 L'analyse est constituée de 3 grands axes : 
 1) Analyse générale sur les valeurs foncières en France.
 2) Focus sur la métropole lyonnaise.
-3) Analyse temporelle - *Time Series ANalysis* (TSA).
-4) Machine Learning (non traité - faute de pertinence).
+3) Analyse temporelle - *Time Series Analysis* (TSA).
